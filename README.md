@@ -1,0 +1,1 @@
+# bugcrowd-submission-template
