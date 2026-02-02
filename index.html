@@ -1,90 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BugCrowd Submission Form</title>
-  <style>
-   body {
-      font-family: Helvetica, sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      color: #222;
-    }
-    h2 {
-      margin-top: 32px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
-    }
-    ul {
-      margin-top: 12px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Vulnerability Disclosure Policy | Snowplow</title>
+
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --border-subtle: #e5e7eb;
+  --link-blue: #2563eb;
+  --cta-bg: #111827;
+  --cta-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-subtle: #1f2937;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.75;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 18px 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.1rem;
+}
+
+/* Content */
+.content-wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 96px 24px 120px;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 44px;
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 56px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 12px 0 14px;
+}
+
+ul {
+  margin: 16px 0 0;
+  padding-left: 22px;
+}
+
+li {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--link-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin-top: 64px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* CTA */
+.cta {
+  margin-top: 72px;
+  padding: 32px;
+  border-radius: 14px;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+}
+
+.cta h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.cta p {
+  color: #d1d5db;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  margin-top: 120px;
+  border-top: 1px solid var(--border-subtle);
+  padding: 36px 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .content-wrapper {
+    padding: 72px 20px 88px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+</style>
 </head>
+
 <body>
- <h1>BugCrowd Submission Form</h1>
- <h2>Brand Promise</h2>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Snowplow</div>
+    <nav>
+      <a href="#" style="margin-right:16px;">Privacy</a>
+      <a href="#">Security</a>
+    </nav>
+  </div>
+</header>
+
+<main class="content-wrapper">
+
+  <h1>Vulnerability Disclosure Policy</h1>
+
+  <h2>Brand Promise</h2>
   <p>
-    Snowplow looks forward to working with the security community to find vulnerabilities in order to keep our business, customers and open source community safe.
+    Snowplow looks forward to working with the security community to find vulnerabilities in order to keep our business, customers, and open source community safe.
   </p>
 
   <h2>Scope</h2>
   <p>
-    This policy applies to any digital assets owned by Snowplow, including public facing websites, our open source estate and any data pipelines we are running. We ask that digital assets we operate, but do not own, are excluded from your testing.
+    This policy applies to any digital assets owned by Snowplow, including public-facing websites, our open source estate, and any data pipelines we operate. We ask that digital assets we operate, but do not own, are excluded from testing.
   </p>
   <p>
-    Regarding any assets operated by, but not owned by, Snowplow; we would like to focus your attention on our own estate, not the solutions we spin up for our customers or the technology of our partners. Starting your journey at
-    <a href="https://snowplowanalytics.com" target="_blank" rel="noopener noreferrer">https://snowplowanalytics.com</a>
+    For assets operated by, but not owned by, Snowplow, please focus on our own estate — not customer deployments or partner technologies. Starting your journey at
+    <a href="https://snowplowanalytics.com" target="_blank">https://snowplowanalytics.com</a>
     should keep you in the right zone.
   </p>
 
   <h2>Out of Scope</h2>
   <p>
-    When reporting vulnerabilities, please consider (1) attack scenario / exploitability, and (2) security impact of the bug. The following issues are considered out of scope:
+    When reporting vulnerabilities, please consider (1) attack scenario / exploitability, and (2) the security impact of the bug. The following issues are considered out of scope:
   </p>
+
   <ul>
     <li>Clickjacking on pages with no sensitive actions</li>
-    <li>Cross-Site Request Forgery (CSRF) on unauthenticated forms or forms with no sensitive actions</li>
-    <li>Attacks requiring MITM or physical access to a user's device</li>
-    <li>Previously known vulnerable libraries without a working, demonstrated Proof of Concept</li>
-    <li>Comma Separated Values (CSV) injection without demonstrating a vulnerability</li>
-    <li>Missing best practices in SSL/TLS configuration</li>
-    <li>Any activity that could lead to the disruption of our service (DoS)</li>
-    <li>Content spoofing and text injection issues without showing an attack vector or without being able to modify HTML/CSS</li>
-    <li>Rate limiting or bruteforce issues on non-authentication endpoints</li>
-    <li>Missing best practices in Content Security Policy</li>
-    <li>Missing HttpOnly or Secure flags on cookies</li>
-    <li>Missing email best practices (Invalid, incomplete or missing SPF/DKIM/DMARC records, etc.)</li>
-    <li>Vulnerabilities only affecting users of outdated or unpatched browsers (less than 2 stable versions behind)</li>
-    <li>Software version disclosure, banner identification issues, or descriptive error messages (e.g. stack traces)</li>
+    <li>CSRF on unauthenticated or non-sensitive forms</li>
+    <li>Attacks requiring MITM or physical access to a user’s device</li>
+    <li>Previously known vulnerable libraries without a working proof of concept</li>
+    <li>CSV injection without demonstrating a vulnerability</li>
+    <li>Missing SSL/TLS best practices</li>
+    <li>Any activity that could lead to service disruption (DoS)</li>
+    <li>Content spoofing or text injection without HTML/CSS modification</li>
+    <li>Rate limiting or brute-force issues on non-authentication endpoints</li>
+    <li>Missing Content Security Policy best practices</li>
+    <li>Missing HttpOnly or Secure cookie flags</li>
+    <li>Email best practice issues (SPF, DKIM, DMARC)</li>
+    <li>Outdated or unpatched browser-only issues</li>
+    <li>Software version disclosure or verbose errors</li>
     <li>Tabnabbing</li>
-    <li>Open redirect unless an additional security impact can be demonstrated</li>
-    <li>Issues that require unlikely user interaction</li>
+    <li>Open redirects without demonstrated impact</li>
+    <li>Issues requiring unrealistic user interaction</li>
   </ul>
 
   <h2>Disclosure Policies</h2>
   <p>
-    Please do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization.
+    Please do not discuss this program or any vulnerabilities outside of the program without express consent from Snowplow.
   </p>
   <p>
-    Follow BugCrowd's disclosure guidelines.
+    Follow BugCrowd’s disclosure guidelines at all times.
   </p>
 
   <h2>Safe Harbor</h2>
   <p>
-    Any activities conducted in a manner consistent with this policy will be considered authorized conduct and we will not initiate legal action against you. If legal action is initiated by a third party against you in connection with activities conducted under this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
+    Any activities conducted in a manner consistent with this policy will be considered authorized. Snowplow will not initiate legal action against individuals who comply with these guidelines.
   </p>
   <p>
-    Thank you for helping keep Snowplow, our customers and our community safe!
+    If a third party initiates legal action against you in connection with approved research, we will take steps to confirm your compliance with this policy.
   </p>
-<br/>
-<br/>
-<br/>
-<script async
+
+  <div class="divider"></div>
+
+  <div class="cta">
+    <h3>Report a Vulnerability</h3>
+    <p>If you believe you’ve found a security issue, please submit it through our BugCrowd program.</p>
+    <a href="https://bugcrowd.com" target="_blank">Submit via BugCrowd</a>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+
+  <script async
   src="https://bugcrowd.com/5a71b7bd-7dc7-463c-baec-00ac0f9395fb/external/script"
   data-bugcrowd-program="https://bugcrowd.com/5a71b7bd-7dc7-463c-baec-00ac0f9395fb/external/report"></script>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    © Snowplow Analytics · Security & Trust · Responsible Disclosure
+  </div>
+</footer>
 </body>
 </html>
