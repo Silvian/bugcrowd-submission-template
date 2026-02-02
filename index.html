@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BugCrowd Submission Form</title>
+  <style>
+   body {
+      font-family: Helvetica, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      color: #222;
+    }
+    h2 {
+      margin-top: 32px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+    ul {
+      margin-top: 12px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
 <body>
-<h1>BugCrowd Submission Form</h1>
+ <h1>BugCrowd Submission Form</h1>
+ <h2>Brand Promise</h2>
+  <p>
+    Snowplow looks forward to working with the security community to find vulnerabilities in order to keep our business, customers and open source community safe.
+  </p>
+
+  <h2>Scope</h2>
+  <p>
+    This policy applies to any digital assets owned by Snowplow, including public facing websites, our open source estate and any data pipelines we are running. We ask that digital assets we operate, but do not own, are excluded from your testing.
+  </p>
+  <p>
+    Regarding any assets operated by, but not owned by, Snowplow; we would like to focus your attention on our own estate, not the solutions we spin up for our customers or the technology of our partners. Starting your journey at
+    <a href="https://snowplowanalytics.com" target="_blank" rel="noopener noreferrer">https://snowplowanalytics.com</a>
+    should keep you in the right zone.
+  </p>
+
+  <h2>Out of Scope</h2>
+  <p>
+    When reporting vulnerabilities, please consider (1) attack scenario / exploitability, and (2) security impact of the bug. The following issues are considered out of scope:
+  </p>
+  <ul>
+    <li>Clickjacking on pages with no sensitive actions</li>
+    <li>Cross-Site Request Forgery (CSRF) on unauthenticated forms or forms with no sensitive actions</li>
+    <li>Attacks requiring MITM or physical access to a user's device</li>
+    <li>Previously known vulnerable libraries without a working, demonstrated Proof of Concept</li>
+    <li>Comma Separated Values (CSV) injection without demonstrating a vulnerability</li>
+    <li>Missing best practices in SSL/TLS configuration</li>
+    <li>Any activity that could lead to the disruption of our service (DoS)</li>
+    <li>Content spoofing and text injection issues without showing an attack vector or without being able to modify HTML/CSS</li>
+    <li>Rate limiting or bruteforce issues on non-authentication endpoints</li>
+    <li>Missing best practices in Content Security Policy</li>
+    <li>Missing HttpOnly or Secure flags on cookies</li>
+    <li>Missing email best practices (Invalid, incomplete or missing SPF/DKIM/DMARC records, etc.)</li>
+    <li>Vulnerabilities only affecting users of outdated or unpatched browsers (less than 2 stable versions behind)</li>
+    <li>Software version disclosure, banner identification issues, or descriptive error messages (e.g. stack traces)</li>
+    <li>Tabnabbing</li>
+    <li>Open redirect unless an additional security impact can be demonstrated</li>
+    <li>Issues that require unlikely user interaction</li>
+  </ul>
+
+  <h2>Disclosure Policies</h2>
+  <p>
+    Please do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without express consent from the organization.
+  </p>
+  <p>
+    Follow BugCrowd's disclosure guidelines.
+  </p>
+
+  <h2>Safe Harbor</h2>
+  <p>
+    Any activities conducted in a manner consistent with this policy will be considered authorized conduct and we will not initiate legal action against you. If legal action is initiated by a third party against you in connection with activities conducted under this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
+  </p>
+  <p>
+    Thank you for helping keep Snowplow, our customers and our community safe!
+  </p>
 <br/>
 <br/>
 <br/>
