@@ -1,1 +1,2 @@
-# bugcrowd-submission-template
+
+# Bug Crowd Submission Template Test Bed Platform
