@@ -102,35 +102,6 @@ a:hover {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* CTA */
-.cta {
-  margin-top: 72px;
-  padding: 32px;
-  border-radius: 14px;
-  background: var(--cta-bg);
-  color: var(--cta-text);
-}
-
-.cta h3 {
-  margin: 0 0 8px;
-  font-size: 1.25rem;
-  letter-spacing: -0.01em;
-}
-
-.cta p {
-  color: #d1d5db;
-}
-
-.cta a {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  font-weight: 600;
-}
-
 /* Footer */
 .footer {
   margin-top: 120px;
@@ -173,32 +144,38 @@ a:hover {
 
 <main class="content-wrapper">
 
-  <h1>Vulnerability Disclosure Policy</h1>
+  <h1>Snowplow Vulnerability Disclosure Program</h1>
 
-  <h2>Brand Promise</h2>
+  <h2>Overview</h2>
   <p>
-    Snowplow looks forward to working with the security community to find vulnerabilities in order to keep our business, customers, and open source community safe.
+    Snowplow is committed to maintaining the security of our systems and the information of our
+    customers. We appreciate and encourage security researchers to alert us, and report potential
+    vulnerabilities identified in any product, system, or asset belonging to Snowplow.
+  </p>
+  <p>
+    If you believe you have identified a potential security vulnerability, please share it with us by using
+    the submission form below. The Snowplow security team will acknowledge receipt of each
+    vulnerability report, conduct a thorough investigation, and then take appropriate action for
+    resolution.
   </p>
 
   <h2>Scope</h2>
   <p>
-    This policy applies to any digital assets owned by Snowplow, including public-facing websites, our open source estate, and any data pipelines we operate. We ask that digital assets we operate, but do not own, are excluded from testing.
+    This program applies to any digital assets owned by Snowplow, including public-facing websites and
+    our open-source and source-available estate. We ask that digital assets we operate, but do not own,
+    such as our deployed customer and partner pipelines are excluded from testing.
   </p>
-  <p>
-    For assets operated by, but not owned by, Snowplow, please focus on our own estate — not customer deployments or partner technologies. Starting your journey at
-    <a href="https://snowplowanalytics.com" target="_blank">https://snowplowanalytics.com</a>
-    should keep you in the right zone.
-  </p>
+  <p>Targets:</p>
+  <ul>
+    <li>Domains: *.snowplow.io, *snowplowanalytics.com, *iglucentral.com</li>
+    <li>Software: github.com/snowplow*</li>
+  </ul>
 
-  <h2>Out of Scope</h2>
-  <p>
-    When reporting vulnerabilities, please consider (1) attack scenario / exploitability, and (2) the security impact of the bug. The following issues are considered out of scope:
-  </p>
-
+  <p>The following issues are considered out of scope:</p>
   <ul>
     <li>Clickjacking on pages with no sensitive actions</li>
     <li>CSRF on unauthenticated or non-sensitive forms</li>
-    <li>Attacks requiring MITM or physical access to a user’s device</li>
+    <li>Attacks requiring MITM or physical access to a user's device</li>
     <li>Previously known vulnerable libraries without a working proof of concept</li>
     <li>CSV injection without demonstrating a vulnerability</li>
     <li>Missing SSL/TLS best practices</li>
@@ -215,21 +192,40 @@ a:hover {
     <li>Issues requiring unrealistic user interaction</li>
   </ul>
 
-  <h2>Disclosure Policies</h2>
+  <h2>Authorization</h2>
   <p>
-    Please do not discuss this program or any vulnerabilities outside of the program without express consent from Snowplow.
-  </p>
-  <p>
-    Follow BugCrowd’s disclosure guidelines at all times.
+    If you make a good-faith effort to comply with this policy during your security research, we will
+    consider your research to be authorized, we will work with you to understand and resolve the issue
+    quickly, and Snowplow will not recommend or pursue legal action related to your research.
   </p>
 
-  <h2>Safe Harbor</h2>
-  <p>
-    Any activities conducted in a manner consistent with this policy will be considered authorized. Snowplow will not initiate legal action against individuals who comply with these guidelines.
-  </p>
-  <p>
-    If a third party initiates legal action against you in connection with approved research, we will take steps to confirm your compliance with this policy.
-  </p>
+  <h2>Our Commitment to the Security Community</h2>
+  <ul>
+    <li><strong>Trust.</strong> We maintain trust and confidentiality in our professional exchanges with security researchers.</li>
+    <li><strong>Respect.</strong> We treat all researchers with respect and recognize your contribution to keeping our customers safe and secure.</li>
+    <li><strong>Transparency.</strong> We will work with you to validate and remediate reported vulnerabilities in accordance with our commitment to security and privacy.</li>
+    <li><strong>Common good.</strong> We investigate and remediate issues in a manner consistent with protecting the safety and security of those potentially affected by a reported vulnerability.</li>
+  </ul>
+
+  <h2>What We Ask of the Security Community</h2>
+  <ul>
+    <li><strong>Trust.</strong> We request that you communicate about potential vulnerabilities in a responsible manner, providing sufficient time and information for our team to validate and address potential issues.</li>
+    <li><strong>Respect.</strong> We request that researchers make every effort to avoid privacy violations, degradation of user experience, disruption to production systems, and destruction of data during security testing.</li>
+    <li><strong>Common Good.</strong> We request that researchers act for the common good, protecting user privacy and security by refraining from publicly disclosing unverified vulnerabilities until our team has had time to validate and address reported issues. Public disclosure of the submission details of any identified or alleged vulnerability without express written consent from Snowplow will deem the submission as non-compliant with this Vulnerability Disclosure Program.</li>
+  </ul>
+
+  <h2>In addition</h2>
+  <ul>
+    <li>The reported vulnerability must be original; the first person to submit a valid report shall be credited.</li>
+    <li>You must not be the author of the vulnerable code.</li>
+    <li>You must not attempt brute-force attacks, denial of service attacks, or user credential harvesting.</li>
+    <li>You must not utilize social engineering of Snowplow employees and contractors to leverage exploitation of any kind.</li>
+    <li>In the event of disclosure of personal data of another person, you are directed to cease the affecting activity, document steps to replicate, and submit the report as soon as possible.</li>
+    <li>If you have discovered a vulnerability, do not disclose details of your findings publicly or to a third party.</li>
+    <li>Information you receive or collect about Snowplow through the Vulnerability Disclosure Program (VDP) may be deemed proprietary and confidential.</li>
+  </ul>
+
+  <h2>Submission Form</h2>
 
   <div class="divider"></div>
 
